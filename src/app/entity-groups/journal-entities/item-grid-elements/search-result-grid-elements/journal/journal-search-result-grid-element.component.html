@@ -25,6 +25,8 @@
         <!-- kware-edit kwareTranslatePipe -->
         <h4 class="card-title" [innerHTML]="dsoTitle | kwareTranslate"></h4>
         <!-- kware-edit end  -->
+        <div style="font-size: 15px;font-weight: 400;" *ngIf="dso.allMetadata(['dc.description.frequancy']).length > 0" class="text-muted">{{firstMetadataValue('dc.description.frequancy') | kwareTranslate}}</div>
+
       </ds-truncatable-part>
       <p *ngIf="dso.hasMetadata('creativework.editor')"
          class="item-publisher card-text text-muted">

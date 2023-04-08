@@ -25,6 +25,7 @@ import {
   getFirstCompletedRemoteData, getFirstSucceededRemoteDataPayload
 } from '../../core/shared/operators';
 import { FindListOptions } from '../../core/data/find-list-options.model';
+import { ActivatedRoute } from '@angular/router';
 
 /**
  * An interface to represent a collection entry
@@ -101,6 +102,16 @@ export class CollectionDropdownComponent implements OnInit, OnDestroy {
    */
   hasNextPage: boolean;
 
+     /*
+   kware start edit
+   - check route if from fast add bt
+   */
+  currentEntityType ='';
+
+  isFastAdd:boolean;
+
+    /* kware end edit*/ 
+
   /**
    * Current search query used to filter collection list
    */
@@ -124,7 +135,8 @@ export class CollectionDropdownComponent implements OnInit, OnDestroy {
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private collectionDataService: CollectionDataService,
-    private el: ElementRef
+    private el: ElementRef,
+    private route: ActivatedRoute,
   ) { }
 
   /**
@@ -147,6 +159,13 @@ export class CollectionDropdownComponent implements OnInit, OnDestroy {
    * Initialize collection list
    */
   ngOnInit() {
+   /*
+   kware start edit
+   - check route if from fast add bt
+   */
+    this.route?.queryParams?.subscribe((params=>{this.currentEntityType= params.entityType}));
+    this.route?.queryParams?.subscribe((params=>{this.isFastAdd = params.action ? true :false}));
+  /* kware end edit*/ 
     this.isLoading.next(false);
     this.subs.push(this.searchField.valueChanges.pipe(
         debounceTime(500),
@@ -218,7 +237,7 @@ export class CollectionDropdownComponent implements OnInit, OnDestroy {
         followLink('parentCommunity'));
     } else {
       searchListService$ = this.collectionDataService
-      .getAuthorizedCollection(query, findOptions, true, true, followLink('parentCommunity'));
+      .getAuthorizedCollection(this.currentEntityType ? this.currentEntityType: query, findOptions, true, true, followLink('parentCommunity'));
     }
     this.searchListCollection$ = searchListService$.pipe(
         getFirstCompletedRemoteData(),

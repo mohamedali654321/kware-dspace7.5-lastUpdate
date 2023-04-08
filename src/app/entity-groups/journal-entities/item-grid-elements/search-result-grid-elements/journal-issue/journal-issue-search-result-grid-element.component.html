@@ -26,18 +26,34 @@
         <h4 class="card-title" [innerHTML]="dsoTitle | kwareTranslate"></h4>
         <!-- kware-edit end  -->
       </ds-truncatable-part>
+
+
+
+      <div *ngIf="dso.allMetadata(['journalvolume.title']).length > 0">
+        <span style="font-size: 15px;font-weight: 600;" [innerHtml]="firstMetadataValue('journalvolume.title') | kwareTranslate"></span>
+  
+      </div>
+  
+       <div *ngIf="dso.allMetadata(['journal.title']).length > 0">
+        <span style="font-size: 15px;font-weight: 600;" [innerHtml]="firstMetadataValue('journal.title') | kwareTranslate">
+
+        </span>
+  
+      </div>
+
       <p *ngIf="dso.hasMetadata('creativework.datePublished')"
          class="item-date card-text text-muted">
         <ds-truncatable-part [id]="dso.id" [minLines]="1">
           <span [innerHTML]="firstMetadataValue('creativework.datePublished')"></span>
         </ds-truncatable-part>
       </p>
-      <p *ngIf="dso.hasMetadata('journal.title')" class="item-journal-title card-text">
+      <!-- <p *ngIf="dso.hasMetadata('journal.title')" class="item-journal-title card-text">
         <ds-truncatable-part [id]="dso.id" [minLines]="3">
           <span [innerHTML]="firstMetadataValue('journal.title') | kwareTranslate"></span>
         </ds-truncatable-part>
-      </p>
-  
+      </p> -->
+      <div style="font-size: 15px;font-weight: 400;" *ngIf="dso.allMetadata(['dc.description.frequancy']).length > 0" class="text-muted">{{firstMetadataValue('dc.description.frequancy') | kwareTranslate}}</div>
+
       <ds-truncatable-part *ngIf="dso.hasMetadata('dc.description')" [id]="dso.id" [minLines]="3">
         <p class="item-abstract card-text">
           <!-- kware-edit kwareTranslatePipe -->

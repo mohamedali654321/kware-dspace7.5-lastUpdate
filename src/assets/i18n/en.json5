@@ -5955,6 +5955,149 @@
   "supervision.search.results.head": "Workflow and Workspace tasks",
 
   "nav.subscriptions" : "Subscriptions",
+
+
+
+
+    "itemtemplate.edit.metadata.add-button": "Add",
+
+  "itemtemplate.edit.metadata.discard-button": "Discard",
+
+  "itemtemplate.edit.metadata.edit.buttons.confirm": "Confirm",
+
+  "itemtemplate.edit.metadata.edit.buttons.drag": "Drag to reorder",
+
+  "itemtemplate.edit.metadata.edit.buttons.edit": "Edit",
+
+  "itemtemplate.edit.metadata.edit.buttons.remove": "Remove",
+
+  "itemtemplate.edit.metadata.edit.buttons.undo": "Undo changes",
+
+  "itemtemplate.edit.metadata.edit.buttons.unedit": "Stop editing",
+
+  "itemtemplate.edit.metadata.empty": "The item template currently doesn't contain any metadata. Click Add to start adding a metadata value.",
+
+  "itemtemplate.edit.metadata.headers.edit": "Edit",
+
+  "itemtemplate.edit.metadata.headers.field": "Field",
+
+  "itemtemplate.edit.metadata.headers.language": "Lang",
+
+  "itemtemplate.edit.metadata.headers.value": "Value",
+
+  "itemtemplate.edit.metadata.metadatafield.error": "An error occurred validating the metadata field",
+
+  "itemtemplate.edit.metadata.metadatafield.invalid": "Please choose a valid metadata field",
+
+  "itemtemplate.edit.metadata.notifications.discarded.content": "Your changes were discarded. To reinstate your changes click the 'Undo' button",
+
+  "itemtemplate.edit.metadata.notifications.discarded.title": "Changed discarded",
+
+  "itemtemplate.edit.metadata.notifications.error.title": "An error occurred",
+
+  "itemtemplate.edit.metadata.notifications.invalid.content": "Your changes were not saved. Please make sure all fields are valid before you save.",
+
+  "itemtemplate.edit.metadata.notifications.invalid.title": "Metadata invalid",
+
+  "itemtemplate.edit.metadata.notifications.outdated.content": "The item template you're currently working on has been changed by another user. Your current changes are discarded to prevent conflicts",
+
+  "itemtemplate.edit.metadata.notifications.outdated.title": "Changed outdated",
+
+  "itemtemplate.edit.metadata.notifications.saved.content": "Your changes to this item template's metadata were saved.",
+
+  "itemtemplate.edit.metadata.notifications.saved.title": "Metadata saved",
+
+  "itemtemplate.edit.metadata.reinstate-button": "Undo",
+
+  "itemtemplate.edit.metadata.reset-order-button": "Undo reorder",
+
+  "itemtemplate.edit.metadata.save-button": "Save",
+
+
+  "curation-task.task.register-doi.label": "Register DOI",
+  "item.edit.tabs.status.buttons.register-doi.label": "Register a new or pending DOI",
+
+  "item.edit.tabs.status.buttons.register-doi.button": "Register DOI...",
+
+  "item.edit.register-doi.header": "Register a new or pending DOI",
+
+  "item.edit.register-doi.description": "Review any pending identifiers and item metadata below and click Confirm to proceed with DOI registration, or Cancel to back out",
+
+  "item.edit.register-doi.confirm": "Confirm",
+
+  "item.edit.register-doi.cancel": "Cancel",
+
+  "item.edit.register-doi.success": "DOI queued for registration successfully.",
+
+  "item.edit.register-doi.error": "Error registering DOI",
+
+  "item.edit.register-doi.to-update": "The following DOI has already been minted and will be queued for registration online",
+  "profile.security.form.label.current-password": "Current password",
+
+  'suborgunit-previous-label':'(previously)',
+
+    'entity.add':'Add',
+
+    'organization.page.website':'Contact link',
+
+   'page.page.fax':'Fax number',
+
+    "search.filters.filter.show-tree": "Browse {{ name }} tree",
+
+    "vocabulary-treeview.header": "Hierarchical tree view",
+
+  "vocabulary-treeview.load-more": "Load more",
+
+  "vocabulary-treeview.search.form.reset": "Reset",
+
+  "vocabulary-treeview.search.form.search": "Search",
+
+  "vocabulary-treeview.search.no-result": "There were no items to show",
+
+  "vocabulary-treeview.tree.description.nsi": "The Norwegian Science Index",
+
+  "vocabulary-treeview.tree.description.srsc": "Research Subject Categories",
+
+  "vocabulary-treeview.info": "Select a subject to add as search filter",
+
+
+
+      "admin.registries.bitstream-formats.table.id" : "ID",
+    "admin.registries.schema.fields.table.id" : "ID",
+    "sorting.person.familyName.ASC":"Surname Ascending",
+    "sorting.person.givenName.ASC":"Name Ascending",
+    "sorting.person.birthDate.DESC":"Birth Date Descending",
+
+
+     'search.filters.filter.content.head':'Content Type',
+ 'search.filters.filter.content.label':'Search content type ',
+ 'search.filters.filter.content.placeholder':'Content Type',
+  "search.filters.applied.f.content":"Content Type",
+
+  'item.page.content':'Content type',
+
+  'journalissue.page.oldFrequancy':'Previous publishing frequency',
+
+  'new.name.variant':'New name variant',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isAdministrationOfPublication':'Selected administrations',
+
+ 'submission.sections.describe.relationship-lookup.selection-tab.title.isPersonOfPublication':'Selected persons',
+
+ 'statistics.table.header':'Views',
+
+
+ 'submission.sections.describe.relationship-lookup.title.isAdministrationOfOrgUnit':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfOrgUnit':'Local Administrations ({{ count }})',
+
+
+"submission.sections.describe.relationship-lookup.title.isActivityOfOrgUnit":"Activities",
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isActivityOfOrgUnit":"Local Activities ({{ count }})",
+
+
+'relationships.isAdvisorsOf':'Advisors',
+'relationships.isPublisherOf':'Publishers',
+'relationships.isDiscussionOf':'Members of the Discussion and Judging Committee',
 }
 
 

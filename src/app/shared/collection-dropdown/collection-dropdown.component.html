@@ -34,7 +34,7 @@
       </ul>
     </button>
   </ng-container>
-  <button class="dropdown-item disabled" *ngIf="(isLoading | async)">
+  <button class="dropdown-item disabled" *ngIf="(isLoading | async) && searchListCollection?.length == 0">
     <ds-themed-loading message="{{'loading.default' | translate}}">
     </ds-themed-loading>
   </button>

@@ -1615,9 +1615,29 @@
   }
 
 
-  ::ng-deep html[dir="rtl"] ds-root{
-    .outer-wrapper {
-      padding-right:0 !important;
+
+  ::ng-deep ds-search-facet-option{
+    label{
+      gap: 5px !important;
     }
-    
   }
+
+
+  // orcid image
+
+::ng-deep ds-metadata-values{
+  img{
+    width: 25px !important;
+  }
+}
+
+::ng-deep html[dir="rtl"] ds-metadata-values img{
+  margin-right: 3px;
+}
+
+::ng-deep html[dir="ltr"] ds-metadata-values img{
+  margin-left: 3px;
+  margin-top: -5px;
+}
+
+

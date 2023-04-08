@@ -3697,7 +3697,7 @@
 
   "submission.sections.submit.progressbar.describe.stepcustom": "وصف",
 
-  "submission.sections.submit.progressbar.describe.stepone": "وصف",
+  "submission.sections.submit.progressbar.describe.stepone": "الوصف الأساسي",
 
   "submission.sections.submit.progressbar.uniDescribe.stepone": "وصف مادي",
 
@@ -3713,7 +3713,7 @@
 
    "submission.sections.submit.progressbar.manuscriptObjectiveDescribe.stepone":" المصطلح الموضوعي",
 
-  "submission.sections.submit.progressbar.describe.steptwo": "وصف",
+  "submission.sections.submit.progressbar.describe.steptwo": "الوصف الإضافي",
 
   "submission.sections.submit.progressbar.detect-duplicate": "تكرارات محتملة",
 
@@ -5444,7 +5444,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfOrgUnit':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfOrgUnit':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfOrgUnit':'الأشخاص  المحليين ({{ count }})',
 
 'nav.demo.site':'موقع للعرض فقط',
 'place.page.zipCode':'الرمز البريدي',
@@ -5532,7 +5532,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfSeries':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'الأشخاص  المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfSeries':'الإدارات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfSeries':' الإدارات المحلية ({{ count }})',
@@ -5581,7 +5581,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfProject':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'الأشخاص  المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfProject':'الإدارات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfProject':' الإدارات المحلية ({{ count }})',
@@ -5689,7 +5689,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfPublication':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPublication':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPublication':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfPublication":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfPublication":"السلاسل المحلية ({{ count }})",
@@ -5698,10 +5698,10 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfPublication':' الإدارات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPublisherOfPublication':'الناشرين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication':'الناشرين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication':'الناشرين المحليين ({{ count }})',
 
 'submission.sections.submit.progressbar.publicationData.stepone':'بيانات الناشر',
 
@@ -5744,7 +5744,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfSubOrgUnit':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfSubOrgUnit':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSubOrgUnit':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSubOrgUnit':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfSubOrgUnit":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfSubOrgUnit":"السلاسل المحلية ({{ count }})",
@@ -5761,7 +5761,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfSite':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfSite':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSite':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSite':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfSite":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfSite":"السلاسل المحلية ({{ count }})",
@@ -5785,7 +5785,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfActivity':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfActivity':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfActivity':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfActivity':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfActivity":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfActivity":"السلاسل المحلية ({{ count }})",
@@ -5811,41 +5811,41 @@
 
 
 'submission.sections.describe.relationship-lookup.title.isFunderOfActivity':'مؤسسي الفعالية',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfActivity':'مؤسسي الفعالية الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfActivity':'مؤسسي الفعالية المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isMangerOfActivity':'مديري الفعالية',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfActivity':'مديري الفعالية الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfActivity':'مديري الفعالية المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAttendeeOfActivity':'الحضور',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfActivity':' الحضور الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfActivity':' الحضور المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSponsorOfActivity':'الرعاة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfActivity':' الرعاة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfActivity':' الرعاة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrganizerOfActivity':'الجهة المنظمة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfActivity':' الجهات المنظمة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfActivity':' الجهات المنظمة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isParticipantOfActivity':'المشاركين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين المحليين ({{ count }})',
 
 
 'submission.sections.describe.relationship-lookup.title.isFunderOfEvent':'مؤسسي الحدث',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfEvent':'مؤسسي الحدث الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfEvent':'مؤسسي الحدث المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isMangerOfEvent':'مديري الحدث',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfEvent':'مديري الحدث الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfEvent':'مديري الحدث المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAttendeeOfEvent':'الحضور',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfEvent':' الحضور الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfEvent':' الحضور المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSponsorOfEvent':'الرعاة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfEvent':' الرعاة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfEvent':' الرعاة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrganizerOfEvent':'الجهة المنظمة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfEvent':' الجهات المنظمة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfEvent':' الجهات المنظمة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isParticipantOfEvent':'المشاركين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين المحليين ({{ count }})',
 
 
 'login.form.oidc':'تسجيل دخول مؤسسي',
@@ -5947,9 +5947,9 @@
 
    "subscriptions.frequency.W": "أسبوعي",
 
-   "Subscriptions.tooltip": "يشترك",
+   "subscriptions.tooltip": "اشترك",
 
-   "Subscriptions.modal.title": "الاشتراكات",
+   "subscriptions.modal.title": "الاشتراكات",
 
    "subscriptions.modal.type-frequency": "النوع والتردد",
 
@@ -5957,9 +5957,9 @@
 
    "subscriptions.modal.delete-info": "لإزالة هذا الاشتراك , يرجى زيارة صفحة  الاشتراكات  ضمن ملف تعريف المستخدم الخاص بك"  ,
 
-   "Subscriptions.modal.new-subscription-form.type.content": "محتوي",
+   "subscriptions.modal.new-subscription-form.type.content": "محتوي",
 
-   "Subscriptions.modal.new-subscription-form.frequency.D": "يوميًا",
+   "subscriptions.modal.new-subscription-form.frequency.D": "يوميًا",
 
    "subscriptions.modal.new-subscription-form.frequency.W": "أسبوعي",
 
@@ -5967,7 +5967,7 @@
 
    "subscriptions.modal.new-subscription-form.submit": "إرسال" ,
 
-   "Subscriptions.modal.new-subscription-form.processing": "جارى المعالجة ...",
+   "subscriptions.modal.new-subscription-form.processing": "جارى المعالجة ...",
 
    "subscriptions.modal.create.success": "تم الاشتراك في {{type}} بنجاح.",
 
@@ -5985,15 +5985,15 @@
 
    "subscriptions.table.subscription_type": "نوع الاشتراك",
 
-   "subscriptions.table.subscription_frequency": "تردد الاشتراك",
+   "subscriptions.table.subscription_frequency": "تواتر الاشتراك",
 
-   "subscriptions.table.action": "Action",
+   "subscriptions.table.action": "الاجراء",
 
    "subscriptions.table.edit": "تحرير",
 
-   "Subscriptions.table.delete": "Delete",
+   "subscriptions.table.delete": "حذف",
 
-   "Subscriptions.table.not-available": "غير متاح",
+   "subscriptions.table.not-available": "غير متاح",
 
    "subscriptions.table.not-available-message": "تم حذف العنصر المشترك , أو ليس لديك إذن بعرضه حاليًا" ,
 
@@ -6013,4 +6013,145 @@
    "mydspace.show.supervisedWorkspace": "العناصر الخاضعة للإشراف",
 
    "nav.subscriptions" : "الاشتراكات",
+
+
+   "itemtemplate.edit.metadata.add-button": "إضافة" ,
+
+   "itemtemplate.edit.metadata.discard-button": "تجاهل" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.confirm": "تأكيد" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.drag": "اسحب لإعادة الترتيب" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.edit": "تحرير" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.remove": "إزالة" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.undo": "تراجع عن التغييرات" ,
+
+   "itemtemplate.edit.metadata.edit.buttons.unedit": "إيقاف التحرير" ,
+
+   "itemtemplate.edit.metadata.empty": "قالب العنصر حاليًا لا يحتوي على أي ميتاداتا. انقر فوق إضافة لبدء إضافة قيمة ميتاداتا.",
+
+   "itemtemplate.edit.metadata.headers.edit": "تحرير" ,
+
+   "itemtemplate.edit.metadata.headers.field": "الحقل" ,
+
+   "itemtemplate.edit.metadata.headers.language": "اللغة",
+
+   "itemtemplate.edit.metadata.headers.value": "القيمة",
+
+   "itemtemplate.edit.metadata.metadatafield.error": "حدث خطأ أثناء التحقق من حقل الميتاداتا" ,
+
+   "itemtemplate.edit.metadata.metadatafield.invalid": "الرجاء اختيار حقل ميتاداتا صالح" ,
+
+   "itemtemplate.edit.metadata.notifications.discarded.content": "تم تجاهل تغييراتك. لإعادة التغييرات , انقر فوق الزر تراجع " ,
+
+   "itemtemplate.edit.metadata.notifications.discarded.title": "تم تجاهلها" ,
+
+   "itemtemplate.edit.metadata.notifications.error.title": "حدث خطأ" ,
+
+   "itemtemplate.edit.metadata.notifications.invalid.content": "لم يتم حفظ التغييرات. يرجى التأكد من أن جميع الحقول صالحة قبل الحفظ.",
+
+   "itemtemplate.edit.metadata.notifications.invalid.title": "الميتاداتا غير صالحة",
+
+   "itemtemplate.edit.metadata.notifications.outdated.content": "تم تغيير قالب العنصر الذي تعمل عليه حاليًا بواسطة مستخدم آخر. تم تجاهل التغييرات الحالية لمنع التعارضات" ,
+
+   "itemtemplate.edit.metadata.notifications.outdated.title": "تم تغييره قديمًا" ,
+
+   "itemtemplate.edit.metadata.notifications.saved.content": "تم حفظ التغييرات التي أجريتها على الميتاداتا لقالب العنصر.",
+
+   "itemtemplate.edit.metadata.notifications.saved.title": "تم حفظ الميتاداتا",
+
+   "itemtemplate.edit.metadata.reinstate-button": "تراجع" ,
+
+   "itemtemplate.edit.metadata.reset-order-button": "تراجع عن إعادة الترتيب" ,
+
+   "itemtemplate.edit.metadata.save-button": "حفظ" ,
+
+
+   "curation-task.task.register-doi.label": "تسجيل DOI" ,
+   "item.edit.tabs.status.buttons.register-doi.label": "تسجيل DOI جديد أو معلق" ,
+
+   "item.edit.tabs.status.buttons.register-doi.button": "تسجيل DOI ..." ,
+
+   "item.edit.register-doi.header": "تسجيل معرف رقمي جديد أو معلق" ,
+
+   "item.edit.register-doi.description": "راجع أي معرفات معلقة وبيانات وصفية للعنصر أدناه وانقر فوق تأكيد  لمتابعة تسجيل DOI أو إلغاء للتراجع" ,
+
+   "item.edit.register-doi.confirm": "تأكيد" ,
+
+   "item.edit.register-doi.cancel": "إلغاء" ,
+
+   "item.edit.register-doi.success": "تم وضع DOI في قائمة الانتظار للتسجيل بنجاح.",
+
+   "item.edit.register-doi.error": "خطأ في تسجيل DOI" ,
+
+   "item.edit.register-doi.to-update": "تم بالفعل سكك معرف المعرف الرقمي (DOI) التالي وسيتم وضعه في قائمة الانتظار للتسجيل عبر الإنترنت" ,
+   "profile.security.form.label.current-password": "كلمة المرور الحالية" ,
+
+    'suborgunit-previous-label':'(سابقًا)',
+
+    'entity.add':'إضافة',
+
+   'organization.page.website':'رابط الاتصال',
+
+   'page.page.fax':'رقم الفاكس',
+
+    "search.filters.filter.show-tree": "تصفح شجرة {{name}}",
+
+    "vocabulary-treeview.header": "عرض الشجرة الهرمي" ,
+
+   "vocabulary-treeview.load-more": "تحميل المزيد" ,
+
+   "vocabulary-treeview.search.form.reset": "إعادة تعيين",
+
+   "vocabulary-treeview.search.form.search": "بحث" ,
+
+   "vocabulary-treeview.search.no-result": "لم تكن هناك عناصر لإظهارها" ,
+
+   "vocabulary-treeview.tree.description.srsc": "فئات موضوع البحث" ,
+
+   "vocabulary-treeview.info": "حدد موضوعًا لإضافته كعامل تصفية بحث" ,
+
+    "vocabulary-treeview.tree.description.nsi": "مؤشر العلوم النرويجي",
+
+
+
+
+         "admin.registries.bitstream-formats.table.id" : "المعرّف",
+     "admin.registries.schema.fields.table.id" : "المعرّف",
+      "sorting.person.familyName.ASC":"الاسم الأخير تصاعدياً",
+    "sorting.person.givenName.ASC":"الاسم الأول تصاعدياً",
+    "sorting.person.birthDate.DESC":"تاريخ الميلاد تنازلياً",
+
+
+    'search.filters.filter.content.head':'طبيعة المحتوى',
+ 'search.filters.filter.content.label':'بحث  طبيعة المحتوى',
+ 'search.filters.filter.content.placeholder':' طبيعة المحتوى',
+  "search.filters.applied.f.content": "طبيعة المحتوى",
+
+  'item.page.content':'طبيعة المحتوى',
+
+  'journalissue.page.oldFrequancy':'تواتر النشر السابق',
+
+  'new.name.variant':'متغير الاسم الجديد',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isAdministrationOfPublication':'الإدارات المحددة',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isPersonOfPublication':'الأشخاص المحددين',
+
+
+  'statistics.table.header':'مشاهدة',
+
+
+ "submission.sections.describe.relationship-lookup.title.isActivityOfOrgUnit":"الفعاليات",
+"submission.sections.describe.relationship-lookup.search-tab.tab-title.isActivityOfOrgUnit":"الفعاليات المحلية  ({{ count }})",
+
+
+
+
+'relationships.isAdvisorsOf':'المشرفين',
+'relationships.isPublisherOf':'الناشرين',
+'relationships.isDiscussionOf':'أعضاء لجنة المناقشة والتحكيم',
 }

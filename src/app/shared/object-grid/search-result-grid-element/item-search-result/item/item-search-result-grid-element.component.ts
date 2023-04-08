@@ -126,15 +126,15 @@ export class ItemSearchResultGridElementComponent extends SearchResultGridElemen
     }
 
 
-    if(this.localeService.getCurrentLanguageCode() === 'ar' && this.dso.firstMetadataValue('dc.description.abstract').includes('|') === true )
+    if(this.localeService.getCurrentLanguageCode() === 'ar' && this.dso.firstMetadataValue('dc.description.abstract') && this.dso.firstMetadataValue('dc.description.abstract').includes('|') === true )
         {
            this.abstract=this.dso.firstMetadataValue('dc.description.abstract').split('|')[1];
         }
-        if(this.localeService.getCurrentLanguageCode() === 'en' && this.dso.firstMetadataValue('dc.description.abstract').includes('|') === true )
+        if(this.localeService.getCurrentLanguageCode() === 'en' && this.dso.firstMetadataValue('dc.description.abstract') && this.dso.firstMetadataValue('dc.description.abstract').includes('|') === true )
         {
            this.abstract=this.dso.firstMetadataValue('dc.description.abstract').split('|')[0];
         }
-        if(this.dso.firstMetadataValue('dc.description.abstract').includes('|') === false )
+        if(this.dso.firstMetadataValue('dc.description.abstract') &&  this.dso.firstMetadataValue('dc.description.abstract').includes('|') === false  )
         {
            this.abstract=this.dso.firstMetadataValue('dc.description.abstract');
         }

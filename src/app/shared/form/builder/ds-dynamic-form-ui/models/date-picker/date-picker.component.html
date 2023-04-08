@@ -14,7 +14,7 @@
       [(ngModel)]="initialYear"
       [value]="year"
       [invalid]="showErrorMessages"
-      [placeholder]='yearPlaceholder'
+      [placeholder]='"year.placeholder" | translate'
       (blur)="onBlur($event)"
       (change)="onChange($event)"
       (focus)="onFocus($event)"
@@ -29,7 +29,7 @@
       [size]="6"
       [(ngModel)]="initialMonth"
       [value]="month"
-      [placeholder]="monthPlaceholder"
+      [placeholder]='"month.placeholder" | translate'
       [disabled]="!year || model.disabled"
       (blur)="onBlur($event)"
       (change)="onChange($event)"
@@ -45,7 +45,7 @@
       [size]="2"
       [(ngModel)]="initialDay"
       [value]="day"
-      [placeholder]="dayPlaceholder"
+      [placeholder]='"day.placeholder" | translate'
       [disabled]="!month || model.disabled"
       (blur)="onBlur($event)"
       (change)="onChange($event)"

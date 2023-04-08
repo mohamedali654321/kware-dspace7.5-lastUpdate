@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { hasValue, isEmpty } from '../../shared/empty.util';
+import { hasValue, isEmpty, isNotEmpty } from '../../shared/empty.util';
 import { DSpaceObject } from '../shared/dspace-object.model';
 import { TranslateService } from '@ngx-translate/core';
 import { Metadata } from '../shared/metadata.utils';
@@ -38,18 +38,22 @@ export class DSONameService {
     Person: (dso: DSpaceObject): string => {
       const familyName = this.localeService.getStringByLocale(dso.firstMetadataValue('person.familyName')) ;
       const givenName = this.localeService.getStringByLocale(dso.firstMetadataValue('person.givenName'));
-      if (isEmpty(familyName) && isEmpty(givenName)) {
-        return this.localeService.getStringByLocale(dso.firstMetadataValue('dc.title')) || dso.name;
-      } else if (isEmpty(familyName) || isEmpty(givenName)) {
+      if ((isEmpty(familyName) || isEmpty(givenName)) && isNotEmpty(dso.firstMetadataValue('dspace.object.owner'))) {
+        return this.localeService.getStringByLocale(dso.firstMetadataValue('dspace.object.owner')) || dso.name;
+      }
+      else if (isEmpty(familyName) || isEmpty(givenName)) {
         return familyName || givenName;
-      } else {
+      }else if   ((isEmpty(familyName) && isEmpty(givenName))&& isEmpty(dso.firstMetadataValue('dspace.object.owner'))) {
+        return this.localeService.getStringByLocale(dso.firstMetadataValue('dc.title')) || dso.name;
+      } 
+       else {
         return this.convertComma(`${familyName}, ${givenName}`);
       }
     },
     OrgUnit: (dso: DSpaceObject): string => {
       return  this.localeService.getStringByLocale(dso.firstMetadataValue('organization.legalName'));
     },
-    SubOrgUnit: (dso: DSpaceObject): string => {
+    Administration: (dso: DSpaceObject): string => {
       return this.localeService.getStringByLocale(dso.firstMetadataValue('organization.childLegalName'));
     },
     Place: (dso: DSpaceObject): string => {
@@ -153,7 +157,7 @@ export class DSONameService {
       return `${familyName}, ${givenName}`;
     } else if (entityType === 'OrgUnit') {
       return this.firstMetadataValue(object, dso, 'organization.legalName');
-    }else if (entityType === 'SubOrgUnit') {
+    }else if (entityType === 'Administration') {
       return this.firstMetadataValue(object, dso, 'organization.childLegalName');
     }else if (entityType === 'Place') {
       return this.firstMetadataValue(object, dso, 'place.legalName');

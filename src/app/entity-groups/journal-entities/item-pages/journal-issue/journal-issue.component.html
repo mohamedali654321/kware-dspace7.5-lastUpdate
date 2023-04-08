@@ -75,7 +75,7 @@
          <!-- <div class="desktop-mode">
           <ds-media-viewer-switcher [item]="object"></ds-media-viewer-switcher>
          </div> -->
-         <ds-item-files-section [item]="object"></ds-item-files-section>
+         <ds-media-viewer-switcher></ds-media-viewer-switcher>
           <!-- mohamed end edit -->
    <!-- <ds-pdf-viewer [item]="object"></ds-pdf-viewer> -->
 
@@ -97,6 +97,12 @@
       [fields]="['creativework.keywords']"
       [label]="'journalissue.page.keyword'">
     </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dc.subject']"
+    [separator]="','"
+    [label]="'item.page.subject'">
+  </ds-generic-item-page-field>
 
     <ds-related-items
     [parentItem]="object"

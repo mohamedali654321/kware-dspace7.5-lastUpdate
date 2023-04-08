@@ -45,7 +45,7 @@
               (click)="onSelect(listEntry); sdRef.close()" (mousedown)="onSelect(listEntry); sdRef.close()"
               title="{{ listEntry.display }}" role="option"
               [attr.id]="listEntry.display == (currentValue|async) ? ('combobox_' + id + '_selected') : null">
-        {{inputFormatter(listEntry)}}
+              {{inputFormatter(listEntry) | kwareTranslate}}
       </button>
       <div class="scrollable-dropdown-loading text-center" *ngIf="loading"><p>{{'form.loading' | translate}}</p></div>
     </div>

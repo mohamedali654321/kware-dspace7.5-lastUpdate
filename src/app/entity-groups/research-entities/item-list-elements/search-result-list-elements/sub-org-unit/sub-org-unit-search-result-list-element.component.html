@@ -28,6 +28,11 @@
             <span *ngIf="linkType == linkTypes.None"
                   class="lead"
                   [innerHTML]="(dsoTitle | kwareTranslate)  || ('orgunit.listelement.no-title' | translate | kwareTranslate)"></span>
+
+                  <div *ngIf="dso.allMetadata(['organization.legalName.alternative']).length > 0">
+                    <span class="text-muted" style="font-size: 15px;font-weight: 600;" [innerHtml]="(firstMetadataValue('organization.legalName.alternative') | kwareTranslate) + ' ' +('suborgunit-previous-label' | translate)"></span>
+            
+                  </div>
                   <span class="text-muted">
                     <ds-truncatable-part [id]="dso.id" [minLines]="1">
                       <span *ngIf="dso.allMetadata(['organization.role']).length> 0"

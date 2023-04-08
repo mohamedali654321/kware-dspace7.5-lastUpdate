@@ -213,12 +213,20 @@
 
 
     <div *ngIf=" !object?.firstMetadata('person.familyName') &&
-      !object?.firstMetadata('person.givenName') ">
+      !object?.firstMetadata('person.givenName') && !object?.firstMetadata('dspace.object.owner')">
       <ds-generic-item-page-field [item]="object"
         [fields]="['dc.title']"
         [label]="'person.page.name'">
       </ds-generic-item-page-field>
     </div>
+
+    <div *ngIf=" !object?.firstMetadata('person.familyName') &&
+    !object?.firstMetadata('person.givenName') && object?.firstMetadata('dspace.object.owner')">
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dspace.object.owner']"
+      [label]="'person.page.name'">
+    </ds-generic-item-page-field>
+  </div>
 
     <ds-generic-item-page-field [item]="object"
       [fields]="['person.affiliation.name']"
@@ -242,8 +250,8 @@
 
   <ds-related-items
   [parentItem]="object"
-  [relationType]="'isSubOrgUnitOfPerson'"
-  [label]="'relationships.isSubOrgUnitOf' | translate">
+  [relationType]="'isAdministrationOfPerson'"
+  [label]="'relationships.isAdministrationOf' | translate">
 </ds-related-items>
 
 

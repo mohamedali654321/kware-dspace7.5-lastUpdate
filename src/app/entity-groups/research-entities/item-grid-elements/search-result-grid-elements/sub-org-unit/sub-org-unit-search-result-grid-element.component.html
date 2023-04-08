@@ -25,6 +25,10 @@
         <!-- kware-edit kwareTranslatePipe -->
         <h4 class="card-title" [innerHTML]="dsoTitle | kwareTranslate"></h4>
       </ds-truncatable-part>
+      <div *ngIf="dso.allMetadata(['organization.legalName.alternative']).length > 0">
+        <span class="text-muted" style="font-size: 15px;font-weight: 600;" [innerHtml]="(firstMetadataValue('organization.legalName.alternative') | kwareTranslate) + ' ' +('suborgunit-previous-label' | translate)"></span>
+
+      </div>
       <p *ngIf="dso.hasMetadata('organization.role')" class="item-jobtitle card-text">
         <ds-truncatable-part [id]="dso.id" [minLines]="3">
           <!-- kware-edit kwareTranslatePipe -->

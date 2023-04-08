@@ -20,6 +20,7 @@ import { SearchConfigurationService } from '../../../../../core/shared/search/se
 import { RouteService } from '../../../../../core/services/route.service';
 import { hasValue } from '../../../../empty.util';
 import { yearFromString } from 'src/app/shared/date.util';
+import { LocaleService } from 'src/app/core/locale/locale.service'; //kware-edit
 
 /**
  * The suffix for a range filters' minimum in the frontend URL
@@ -68,6 +69,10 @@ export class SearchRangeFilterComponent extends SearchFacetFilterComponent imple
    */
   sub: Subscription;
 
+
+   // check locale of interface  kware-edit
+   direction: string;
+
   /**
    * Whether the sider is being controlled by the keyboard.
    * Supresses any changes until the key is released.
@@ -78,6 +83,7 @@ export class SearchRangeFilterComponent extends SearchFacetFilterComponent imple
               protected filterService: SearchFilterService,
               protected router: Router,
               protected rdbs: RemoteDataBuildService,
+              public localeService: LocaleService , /* kware edit - call service from LocaleService */
               @Inject(SEARCH_CONFIG_SERVICE) public searchConfigService: SearchConfigurationService,
               @Inject(IN_PLACE_SEARCH) public inPlaceSearch: boolean,
               @Inject(FILTER_CONFIG) public filterConfig: SearchFilterConfig,
@@ -105,6 +111,7 @@ export class SearchRangeFilterComponent extends SearchFacetFilterComponent imple
         return [minimum, maximum];
       })
     ).subscribe((minmax) => this.range = minmax);
+    this.direction = this.localeService.getCurrentLanguageCode() === 'ar' ? 'rtl' : 'ltr';    //kware-edit
   }
 
   /**

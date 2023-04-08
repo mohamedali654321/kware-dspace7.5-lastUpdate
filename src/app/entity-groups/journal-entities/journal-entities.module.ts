@@ -22,6 +22,12 @@ import { JournalSidebarSearchListElementComponent } from './item-list-elements/s
 import { ItemSharedModule } from '../../item-page/item-shared.module';
 import { ResultsBackButtonModule } from '../../shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../shared/dso-page/dso-page.module';
+/** kware-edit start */
+import {JournalIssueItemMetadataListElementComponent} from './metadata-representations/journal-issue/journal-issue-item-metadata-list-element.component';
+import {JournalVolumeItemMetadataListElementComponent} from './metadata-representations/journal-volume/journal-volume-item-metadata-list-element.component';
+import {JournalItemMetadataListElementComponent} from './metadata-representations/journal/journal-item-metadata-list-element.component'
+
+/** kware-edit end */
 const ENTRY_COMPONENTS = [
   // put only entry components that use custom decorator
   JournalComponent,
@@ -42,6 +48,11 @@ const ENTRY_COMPONENTS = [
   JournalVolumeSidebarSearchListElementComponent,
   JournalIssueSidebarSearchListElementComponent,
   JournalSidebarSearchListElementComponent,
+  /** kware-edit start */
+  JournalIssueItemMetadataListElementComponent,
+  JournalVolumeItemMetadataListElementComponent,
+  JournalItemMetadataListElementComponent
+  /** kware-edit end */
 ];
 
 @NgModule({

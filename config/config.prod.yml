@@ -17,9 +17,9 @@ ui:
 # The REST API server settings
 # NOTE: these must be 'synced' with the 'dspace.server.url' setting in your backend's local.cfg.
 rest:
-  ssl: false
-  host: 52.209.192.143
-  port: 7079
+  ssl: true
+  host: dspace7-api.kwaretech.com
+  port: 443
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
   nameSpace: /server
 
@@ -88,14 +88,14 @@ auth:
   # Authentication UI settings
   ui:
     # the amount of time before the idle warning is shown
-    timeUntilIdle: 6000000 # 15 minutes
+    timeUntilIdle: 600000000 # 15 minutes
     # the amount of time the user has to react after the idle warning is shown before they are logged out.
-    idleGracePeriod: 300000 # 5 minutes
+    idleGracePeriod: 3000000 # 5 minutes
   # Authentication REST settings
   rest:
     # If the rest token expires in less than this amount of time, it will be refreshed automatically.
     # This is independent from the idle warning.
-    timeLeftBeforeTokenRefresh: 1200000 # 2 minutes
+    timeLeftBeforeTokenRefresh: 12000000 # 2 minutes
 
 # Form settings
 form:

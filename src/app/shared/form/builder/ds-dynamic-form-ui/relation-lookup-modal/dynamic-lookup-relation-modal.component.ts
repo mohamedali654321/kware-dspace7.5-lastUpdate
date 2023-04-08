@@ -1,7 +1,7 @@
 import { Component, EventEmitter, NgZone, OnDestroy, OnInit, Output } from '@angular/core';
 import { combineLatest as observableCombineLatest, Observable, Subscription, BehaviorSubject } from 'rxjs';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { hasValue, isNotEmpty } from '../../../../empty.util';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { hasValue, isNotEmpty, isNotNull } from '../../../../empty.util';
 import { map, skip, switchMap, take } from 'rxjs/operators';
 import { SEARCH_CONFIG_SERVICE } from '../../../../../my-dspace-page/my-dspace-page.component';
 import { SearchConfigurationService } from '../../../../../core/shared/search/search-configuration.service';
@@ -26,11 +26,21 @@ import { ExternalSource } from '../../../../../core/shared/external-source.model
 import { ExternalSourceDataService } from '../../../../../core/data/external-source-data.service';
 import { Router } from '@angular/router';
 import { RemoteDataBuildService } from '../../../../../core/cache/builders/remote-data-build.service';
-import { getAllSucceededRemoteDataPayload } from '../../../../../core/shared/operators';
+import { getAllSucceededRemoteDataPayload, getFirstCompletedRemoteData } from '../../../../../core/shared/operators';
 import { followLink } from '../../../../utils/follow-link-config.model';
 import { RelationshipType } from '../../../../../core/shared/item-relationships/relationship-type.model';
-/** kware start edit -- fix search modal focus */
+/** kware start edit -- add fast add btn */
 import { Location } from '@angular/common';
+import { ItemType } from 'src/app/core/shared/item-relationships/item-type.model';
+import { Collection } from 'src/app/core/shared/collection.model';
+import { buildPaginatedList, PaginatedList } from 'src/app/core/data/paginated-list.model';
+import { RemoteData } from 'src/app/core/data/remote-data';
+import { SearchService } from 'src/app/core/shared/search/search.service';
+import { CollectionDataService } from 'src/app/core/data/collection-data.service';
+import { CollectionSearchResult } from 'src/app/shared/object-collection/shared/collection-search-result.model';
+import { SubmissionObject } from 'src/app/core/submission/models/submission-object.model';
+import { SubmissionService } from 'src/app/submission/submission.service';
+/** kware end edit */
 @Component({
   selector: 'ds-dynamic-lookup-relation-modal',
   styleUrls: ['./dynamic-lookup-relation-modal.component.scss'],
@@ -53,6 +63,7 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
    * The label to use to display i18n messages (describing the type of relationship)
    */
   label: string;
+
 
   /**
    * Options for searching related items
@@ -95,6 +106,17 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
   metadataFields: string;
 
   query: string;
+
+/** kware start edit -- add fast add btn */
+
+  collectionIdByEntity = '';
+
+  submissionIdByEntity : string;
+
+  modelPlaceholder: string;
+
+
+  /** kware end edit */
 
   /**
    * A map of subscriptions within this component
@@ -166,8 +188,11 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
     private zone: NgZone,
     private store: Store<AppState>,
     private router: Router,
-    /** kware start edit -- fix search modal focus */
+    /** kware start edit -- add fast add btn */
    private location: Location,
+   private searchService: SearchService,
+   private collectionDataService: CollectionDataService,
+   private submissionService: SubmissionService,
    /** kware end edit */
   ) {
 
@@ -208,6 +233,44 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
     }
 
     this.setTotals();
+
+
+/*
+kware-edit start
+-add fast add btn
+- get collection by entity type 
+*/
+
+let searchListService$: Observable<RemoteData<PaginatedList<Collection>>> = null;
+
+searchListService$ = this.collectionDataService
+    .getAuthorizedCollection(this.relationshipOptions?.searchConfiguration,{} ,true, false, followLink('parentCommunity'));
+    searchListService$.pipe(
+      getFirstCompletedRemoteData(),
+      map((rd) => Object.assign(new RemoteData(null, null, null, null), rd, {
+        payload: hasValue(rd.payload) ? buildPaginatedList(rd.payload.pageInfo, rd.payload.page.map((col) => Object.assign(new CollectionSearchResult(), { indexableObject: col }))) : null,
+      }))
+    );
+    searchListService$.subscribe(res=>{
+if(res?.payload?.page[0]?.id !== this.collectionIdByEntity){
+  this.collectionIdByEntity = res?.payload?.page[0]?.id;
+
+  this.submissionService.createSubmission(this.collectionIdByEntity)
+  .subscribe((submissionObject: SubmissionObject) => {
+    // NOTE new submission is created on the browser side only
+    if (isNotNull(submissionObject)) {
+      if (isNotEmpty(submissionObject)) {
+        this.submissionIdByEntity = submissionObject?.id;
+    }
+  }})
+
+}
+    });
+
+
+/* kware-edit end*/
+
+
   }
 
   close() {
@@ -302,10 +365,10 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
   }
 
   ngOnDestroy() {
-      // this.router.navigate([], {});
+       this.router.navigate([], {});
     
     /** kware start edit -- fix search modal focus */
-    this.location.replaceState(window.location.pathname);
+    // this.location.replaceState(window.location.pathname);
     /** kware end edit */
     Object.values(this.subMap).forEach((subscription) => subscription.unsubscribe());
   }
@@ -323,5 +386,7 @@ export class DsDynamicLookupRelationModalComponent implements OnInit, OnDestroy 
   submitEv(): void {
   }
   /* eslint-enable no-empty, @typescript-eslint/no-empty-function */
+
+
 
 }

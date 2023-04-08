@@ -30,9 +30,13 @@
             <span *ngIf="dso.allMetadata(['journal.title']).length > 0"
                   class="item-list-journal-volumes">
                     <span *ngFor="let value of allMetadataValues(['journal.title']); let last=last;">
-                        <span [innerHTML]="value | kwareTranslate"><span [innerHTML]="value | kwareTranslate"></span></span>
+                        <span [innerHTML]="value | kwareTranslate"><span [innerHTML]="value | kwareTranslate"></span>
+                      </span>
                     </span>
             </span>
+
+            <span style="font-size: 15px;font-weight: 400;" *ngIf="dso.allMetadata(['dc.description.frequancy']).length > 0" class="text-muted">{{'(' +(firstMetadataValue('dc.description.frequancy') | kwareTranslate)+ ')'}}</span>
+
             <span *ngIf="dso.allMetadata(['publicationvolume.volumeNumber']).length > 0"
                   class="item-list-journal-volume-identifiers">
                     <span *ngFor="let value of allMetadataValues(['publicationvolume.volumeNumber']); let last=last;">

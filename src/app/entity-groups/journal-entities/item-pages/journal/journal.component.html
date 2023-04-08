@@ -47,6 +47,12 @@
       [fields]="['creativeworkseries.issn']"
       [label]="'journal.page.issn'">
     </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dc.description.frequancy']"
+    [label]="'journalissue.page.frequancy'">
+  </ds-generic-item-page-field>
+  
     <ds-generic-item-page-field class="item-page-fields" [item]="object"
       [fields]="['creativework.publisher']"
       [label]="'journal.page.publisher'">

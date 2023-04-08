@@ -22,7 +22,7 @@ import { MetadataValue } from '../../core/shared/metadata.models';
 import { getFirstSucceededRemoteListPayload } from '../../core/shared/operators';
 import { collectionFormEntityTypeSelectionConfig, collectionFormModels, } from './collection-form.models';
 import { NONE_ENTITY_TYPE } from '../../core/shared/item-relationships/item-type.resource-type';
-
+import { LocaleService } from 'src/app/core/locale/locale.service'; //kware-edit
 /**
  * Form used for creating and editing collections
  */
@@ -60,6 +60,7 @@ export class CollectionFormComponent extends ComColFormComponent<Collection> imp
                      protected authService: AuthService,
                      protected dsoService: CommunityDataService,
                      protected requestService: RequestService,
+                     public localeService: LocaleService, //kware-edit
                      protected objectCache: ObjectCacheService,
                      protected entityTypeService: EntityTypeDataService) {
     super(formService, translate, notificationsService, authService, requestService, objectCache);
@@ -84,7 +85,7 @@ export class CollectionFormComponent extends ComColFormComponent<Collection> imp
           .forEach((type: ItemType, index: number) => {
           this.entityTypeSelection.add({
             disabled: false,
-            label: type.label,
+            label: this.getEntityType(type.label), //kware-edit
             value: type.label
           } as DynamicFormOptionConfig<string>);
           if (currentRelationshipValue && currentRelationshipValue.length > 0 && currentRelationshipValue[0].value === type.label) {
@@ -99,4 +100,134 @@ export class CollectionFormComponent extends ComColFormComponent<Collection> imp
     });
 
   }
+
+  // kware-edit
+  getEntityType(label) {
+    switch (true) {
+      case label === 'Person' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'شخص';
+        break;
+      case label === 'Person' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Publication' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'منشور';
+        break;
+      case label === 'Publication' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Project' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'مشروع';
+        break;
+      case label === 'Project' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'OrgUnit' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'مؤسسة';
+        break;
+      case label === 'OrgUnit' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Journal' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'دورية';
+        break;
+      case label === 'Journal' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'JournalVolume' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'مجلد دورية';
+        break;
+      case label === 'JournalVolume' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'JournalIssue' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'عدد دورية';
+        break;
+      case label === 'JournalIssue' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Event' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'حدث';
+        break;
+      case label === 'Event' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Place' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'مكان';
+        break;
+      case label === 'Place' &&
+        this.localeService.getCurrentLanguageCode() === 'en':
+        return label;
+        break;
+      case label === 'Series' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'سلسة';
+        break;
+      case label === 'Series' &&
+          this.localeService.getCurrentLanguageCode() === 'en':
+          return label;
+        break;
+        case label === 'Era' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'حقبة زمنية';
+        break;
+      case label === 'Era' &&
+          this.localeService.getCurrentLanguageCode() === 'en':
+          return label;
+          break;
+          case label === 'SubOrgUnit' &&
+          this.localeService.getCurrentLanguageCode() === 'ar':
+          return 'إدارة';
+          break;
+      case label === 'SubOrgUnit' &&
+            this.localeService.getCurrentLanguageCode() === 'en':
+            return label;
+            break;
+     case label === 'Location' &&
+            this.localeService.getCurrentLanguageCode() === 'ar':
+            return 'موقع جغرافي';
+            break;
+          case label === 'Location' &&
+              this.localeService.getCurrentLanguageCode() === 'en':
+              return label;
+        break;
+    case label === 'Site' &&
+        this.localeService.getCurrentLanguageCode() === 'ar':
+        return 'موقع';
+        break;
+      case label === 'Site' &&
+          this.localeService.getCurrentLanguageCode() === 'en':
+          return label;
+          break;
+
+    case label === 'Activity' &&
+         this.localeService.getCurrentLanguageCode() === 'ar':
+          return 'فعالية';
+          break;
+   case label === 'Activity' &&
+      this.localeService.getCurrentLanguageCode() === 'en':
+      return label;
+      break;
+      default:
+        return label;
+    }
+  }
+  // kware-edit end
 }

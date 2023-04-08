@@ -55,10 +55,10 @@ export class ItemPageFieldComponent {
      * Return browse definition that matches any field used in this component if it is configured as a browse
      * link in dspace.cfg (webui.browse.link.<n>)
      */
-    get browseDefinition(): Observable<BrowseDefinition> {
-      return this.browseDefinitionDataService.findByFields(this.fields).pipe(
-        getRemoteDataPayload(),
-        map((def) => def)
-      );
-    }
+    // get browseDefinition(): Observable<BrowseDefinition> {
+    //   return this.browseDefinitionDataService.findByFields(this.fields).pipe(
+    //     getRemoteDataPayload(),
+    //     map((def) => def)
+    //   );
+    // }
 }

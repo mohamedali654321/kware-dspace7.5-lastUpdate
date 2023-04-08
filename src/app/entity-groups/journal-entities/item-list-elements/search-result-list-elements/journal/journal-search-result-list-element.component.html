@@ -23,6 +23,9 @@
             class="lead item-list-title dont-break-out"
             [innerHTML]="dsoTitle | kwareTranslate"></span>
             <!-- kware-edit end  -->
+
+            <div style="font-size: 15px;font-weight: 400;" *ngIf="dso.allMetadata(['dc.description.frequancy']).length > 0" class="text-muted">{{firstMetadataValue('dc.description.frequancy') | kwareTranslate}}</div>
+
       <span class="text-muted">
     <ds-truncatable-part [id]="dso.id" [minLines]="1">
             <span *ngIf="dso.allMetadata(['creativeworkseries.issn']).length > 0"
