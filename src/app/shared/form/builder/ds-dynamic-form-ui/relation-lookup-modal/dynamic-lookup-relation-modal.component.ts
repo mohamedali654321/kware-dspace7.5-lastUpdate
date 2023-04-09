@@ -242,19 +242,17 @@ kware-edit start
 */
 
 let searchListService$: Observable<RemoteData<PaginatedList<Collection>>> = null;
-
 searchListService$ = this.collectionDataService
-    .getAuthorizedCollection(this.relationshipOptions?.searchConfiguration,{} ,true, false, followLink('parentCommunity'));
+    .getAuthorizedCollection(this.relationshipOptions?.searchConfiguration === 'journal' ? this.relationshipOptions?.searchConfiguration+'~0':this.relationshipOptions?.searchConfiguration,{} ,true, false, followLink('parentCommunity'));
     searchListService$.pipe(
       getFirstCompletedRemoteData(),
       map((rd) => Object.assign(new RemoteData(null, null, null, null), rd, {
         payload: hasValue(rd.payload) ? buildPaginatedList(rd.payload.pageInfo, rd.payload.page.map((col) => Object.assign(new CollectionSearchResult(), { indexableObject: col }))) : null,
       }))
     );
-    searchListService$.subscribe(res=>{
+  searchListService$.subscribe(res=>{
 if(res?.payload?.page[0]?.id !== this.collectionIdByEntity){
   this.collectionIdByEntity = res?.payload?.page[0]?.id;
-
   this.submissionService.createSubmission(this.collectionIdByEntity)
   .subscribe((submissionObject: SubmissionObject) => {
     // NOTE new submission is created on the browser side only
@@ -266,8 +264,6 @@ if(res?.payload?.page[0]?.id !== this.collectionIdByEntity){
 
 }
     });
-
-
 /* kware-edit end*/
 
 

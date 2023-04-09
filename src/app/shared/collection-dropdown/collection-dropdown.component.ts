@@ -237,7 +237,7 @@ export class CollectionDropdownComponent implements OnInit, OnDestroy {
         followLink('parentCommunity'));
     } else {
       searchListService$ = this.collectionDataService
-      .getAuthorizedCollection(this.currentEntityType ? this.currentEntityType: query, findOptions, true, true, followLink('parentCommunity'));
+      .getAuthorizedCollection(this.currentEntityType ? (this.currentEntityType ==='journal'? this.currentEntityType+'~0' : this.currentEntityType ) : query, findOptions, true, true, followLink('parentCommunity'));
     }
     this.searchListCollection$ = searchListService$.pipe(
         getFirstCompletedRemoteData(),
